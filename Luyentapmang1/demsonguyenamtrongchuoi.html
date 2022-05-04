@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8/>
+    <title>Viết chương trình đếm số nguyên âm trong một chuỗi</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    function count(str1) {
+        let list = 'aeiouAEIOU';
+        let count = 0;
+        for (let x = 0; x < str1.length; x++) {
+            if (list.indexOf(str1[x]) !== -1) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+    document.write(count("Life is a story"));
+</script>

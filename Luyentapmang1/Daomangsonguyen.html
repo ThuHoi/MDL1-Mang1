@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</title>
+</head>
+<body>
+<p>[1,5,7,9,2,4,6,8]</p>
+<input type="submit" value="Đảo mảng" onclick="dao()">
+<p>Kết quả:</p>
+<p id="ip"></p>
+</body>
+</html>
+<script>
+    function dao() {
+        let x = [1, 5, 7, 9, 2, 4, 6, 8];
+        let first = 0;
+        let last = x.length - 1;
+
+        while (first < last) {
+            let b = x[first]
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        }
+        document.getElementById('ip').innerHTML = x;
+    }
+</script>
